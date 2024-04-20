@@ -1,0 +1,132 @@
+@import url(variable.css);
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--color-primary);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-calculator);
+    width: 30%;
+    height: 85vh;
+    border-radius: 15px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.container_output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: var(--color-primary-2);
+    width: 100%;
+    height: 25%;
+    border-radius: 10px;
+}
+
+.output {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: var(--color-secundary);
+    width: 95%;
+    height: 70%;
+    font-size: clamp(2.2em, 4.5vw, 7em);
+}
+
+.container_butons {
+    width: 100%;
+    height: 75%;
+    padding: 10px;
+    background: var(--color-primary-2);
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+}
+
+
+.buton1 { grid-area: 3 / 1 / 4 / 2; }
+.buton2 { grid-area: 3 / 2 / 4 / 3; }
+.buton3 { grid-area: 3 / 3 / 4 / 4; }
+.buton4 { grid-area: 2 / 1 / 3 / 2; }
+.buton5 { grid-area: 2 / 2 / 3 / 3; }
+.buton6 { grid-area: 2 / 3 / 3 / 4; }
+.buton7 { grid-area: 1 / 1 / 2 / 2; }
+.buton8 { grid-area: 1 / 2 / 2 / 3; }
+.buton9 { grid-area: 1 / 3 / 2 / 4; }
+.buton0 { grid-area: 4 / 2 / 5 / 3; }
+.punto { grid-area: 4 / 1 / 5 / 2; }
+.division { grid-area: 4 / 3 / 5 / 4; }
+.multiplicacion { grid-area: 4 / 4 / 5 / 5; }
+.resta { grid-area: 3 / 4 / 4 / 5; }
+.suma { grid-area: 2 / 4 / 3 / 5; }
+.del { grid-area: 1 / 4 / 2 / 5; }
+.igualdad { grid-area: 5 / 3 / 6 / 5; }
+.reset { grid-area: 5 / 1 / 6 / 3; }
+
+
+.boton0, .buton1, .buton2, .buton3, .buton4, .buton5, .buton6, .buton7, .buton8, .buton9, .division, .punto, .multiplicacion, .suma, .resta, .del {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: var(--color-secundary);
+    font-size: clamp(1.5em 1.8vw, 3em);
+    transition: ease-in-out 0.5s;
+} 
+
+.del, .reset {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: clamp(1.5, 1.8vw, 3em);
+    background: var(--color-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secundary);
+    transition: ease-in-out 0.5s;
+}
+
+.igualdad {
+    background-color: var(--color-4);
+    font-size: clamp(1.5em, 2.5vw, 3em);
+    transition: ease-in 0.5s;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-secundary);
+}
+
+.boton0:hover, .buton1:hover, .buton2:hover, .buton3:hover, .buton4:hover, .buton5:hover, .buton6:hover, .buton7:hover, .buton8:hover, .buton9:hover, .division:hover, .punto:hover, .multiplicacion:hover, .suma:hover, .resta:hover, .del:hover { 
+    background: #e0480b;
+    transition: ease-in-out 0.5s;
+}
+
+.del:hover, .reset:hover {
+    background: var(--color-4);
+}
+
+.igualdad:hover {
+    background: var(--color-primary);
+    transition: ease-in-out 0.5s;
+}
